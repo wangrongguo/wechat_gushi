@@ -1,3 +1,8 @@
+## 古诗词小程序
+- 唐诗
+- 宋词
+- 翻译赏析（数据来自https://www.gushiwen.cn/）
+- 一句（数据来自https://hitokoto.cn/）
 ## 微信小程序开发模板初始化 demo
 - 初始化npm package.json
 - npm init
