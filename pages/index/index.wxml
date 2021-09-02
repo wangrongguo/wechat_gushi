@@ -1,0 +1,44 @@
+<!--pages/index/index.wxml-->
+<import src="../../template/na_tabBar_template.wxml" />
+<template is="na_tabBar_template" data="{{na_tabbar}}" />
+
+<view class="page">
+  <view bindtap="close" class="weui-mask {{!show_user ? 'weui-mask_hidden' : '' }}" wx:if="{{mask_user}}"></view>
+  <view wx:if="{{show_user}}" bindtap="close" class="weui-dialog__wrp {{extClass_user}}">
+    <view class="weui-dialog" catchtap="stopEvent">
+      <view class="weui-dialog__hd">
+        <view class="weui-dialog__title">{{title_user}}
+          <slot name="title"></slot>
+        </view>
+      </view>
+      <view class="weui-dialog__bd">
+        <slot></slot>
+      </view>
+      <view class="weui-dialog__ft">
+        <block wx:if="{{buttons_user && buttons_user.length}}">
+          <button wx:for="{{buttons_user}}" wx:key="index" type="{{index == 1 ? 'primary' : ''}}"
+            style="line-height: 35px;" bindtap="getUserProfile" data-index="{{index}}">{{item.text}}</button>
+        </block>
+        <slot name="footer" wx:else></slot>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="r_page">
+  <view class="r_hitokoto">
+    {{one_data.hitokoto}}
+  </view>
+  <view>
+    <!-- <view wx:if="{{one_data.creator}}" class="r_title">
+    --{{one_data.creator}}
+    </view> -->
+    <view wx:if="{{one_data.from}}" class="r_title">
+      --{{one_data.from}}
+    </view>
+  </view>
+  
+</view>
+<view class="weui-loadmore weui-loadmore_line" style="margin-top: 25%;">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">提示：下拉刷新</view>
+</view>

@@ -1,0 +1,33 @@
+<!--pages/index/index.wxml-->
+<import src="../../template/na_tabBar_template.wxml" />
+<template is="na_tabBar_template" data="{{na_tabbar}}" />
+
+
+<view class="r_page {{my_data.content.length < 70 ? 'r_mt40' : ''}}">
+  <view class="r_hitokoto">
+    <text>{{my_data.content}}</text>
+  </view>
+  <view>
+    <view wx:if="{{my_data.title}}" class="r_title">
+      《{{my_data.title}}》
+    </view>
+  </view>
+  <view>
+    <view wx:if="{{my_data.author}}" class="r_title">
+      --{{my_data.author}}
+    </view>
+
+  </view>
+
+
+</view>
+
+<view class="r_detail">
+  <navigator url="../my_detail/my_detail?num={{num}}&type=1">
+    <view>详情>></view>
+  </navigator>
+</view>
+
+<view class="weui-loadmore weui-loadmore_line" style="margin-top: 25%;">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">提示：下拉刷新</view>
+</view>

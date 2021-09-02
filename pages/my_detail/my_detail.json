@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "mp-navigation-bar": "../../template/navigation-bar/navigation-bar",
+    "mp-tabs": "@miniprogram-component-plus/tabs"
+  },
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": false,
+  "disableScroll": false
+}

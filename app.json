@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/my/my",
+    "pages/song/song",
+    "pages/my_detail/my_detail",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#1AAD19",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/tangshi.png",
+        "selectedIconPath": "images/tangshi_select.png",
+        "text": "唐诗"
+      },
+      {
+        "pagePath": "pages/song/song",
+        "iconPath": "images/songci.png",
+        "selectedIconPath": "images/songci_select.png",
+        "text": "宋词"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_component.png",
+        "selectedIconPath": "images/icon_component_HL.png",
+        "text": "一句"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

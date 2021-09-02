@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-navigation-bar": "../../template/navigation-bar/navigation-bar"
+  },
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "disableScroll": false
+}

@@ -1,0 +1,13 @@
+/* pages/index/index.wxss */
+@import "../../app.wxss";
+
+.r_hitokoto{
+  font-size: 1.5rem;
+}
+.r_title{
+  float: right;
+}
+.r_page{
+  padding: 0 10px;
+  margin-top: 40%;
+}

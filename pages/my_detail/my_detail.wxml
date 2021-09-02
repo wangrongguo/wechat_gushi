@@ -1,0 +1,32 @@
+<!--pages/index/index.wxml-->
+<wxs src="../../utils/re.wxs" module="tools" />
+<import src="../../template/na_tabBar_template.wxml" />
+<template is="na_tabBar_template" data="{{na_tabbar}}" />
+
+<view class="page">
+
+<mp-tabs 
+  tabs="{{tabs}}" 
+  activeTab="{{activeTab}}" 
+  swiperClass="weui-tabs-swiper"
+  bindtabclick="onTabClick"
+  bindchange="onChange"
+  activeClass="tab-bar-title__selected"
+  
+>
+  <block wx:for="{{tabs}}" wx:key="title">
+    <view class="tab-content" data-set="{{item}}" slot="tab-content-{{index}}" bind:tap="handleClick" >
+      
+      <view class="item-desc">
+        <scroll-view  scroll-y="true" style="height: {{height-125}}px;" bindscrolltoupper="upper" bindscrolltolower="lower"
+        bindscroll="scroll" refresher-enabled="{{false}}" refresher-threshold="{{10}}"
+        refresher-triggered="{{triggered}}" bindrefresherrefresh="onRefresh" bindrefresherrestore="onRestore"
+        scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+          <text user-select="true">{{item.desc}}</text>
+        </scroll-view>
+        
+      </view>
+    </view>
+  </block>
+</mp-tabs>
+</view>
